@@ -1,0 +1,49 @@
+<html>
+</html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="cal.css">
+<title>
+Sample Calculator
+</title>
+</head>
+<body>
+<div class="pos">
+<input  type="text" class="bar" name="result"><br>
+<button class="btn" onclick="updateResult(7)">7</button>
+<button class="btn" onclick="updateResult(8)">8</button>
+<button class="btn" onclick="updateResult(9)">9</button>
+<button class="btn op" onclick="updateResult('*')">x</button><br>
+<button class="btn" onclick="updateResult(4)">4</button>
+<button class="btn" onclick="updateResult(5)">5</button>
+<button class="btn" onclick="updateResult(6)">6</button>
+<button class="btn op" onclick="updateResult('-')">-</button><br>
+<button class="btn" onclick="updateResult(1)">1</button>
+<button class="btn" onclick="updateResult(2)">2</button>
+<button class="btn" onclick="updateResult(3)">3</button>
+<button class="btn op" onclick="updateResult('+')">+</button><br>
+<button class="btn" onclick="updateResult(0)">0</button>
+<button class="btn" onclick="updaedResult('.')">.</button>
+<button class="btn" onclick="showResult('=')">=</button>
+<button class="btn op" onclick="updateResult('/')">/</button><br>
+<button class="lbtn" onclick="clearResult()">Clear</button>
+
+</div>
+
+
+<script>
+	function updateResult(a){
+		document.getElementsByName('result')[0].value+=a;
+
+	}
+	function showResult(){
+		val= eval(document.getElementsByName('result')[0].value);
+		document.getElementsByName('result')[0].value=val;
+	}
+	function clearResult(){
+		document.getElementsByName('result')[0].value="";
+
+	}
+
+	
+</script>
